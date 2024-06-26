@@ -2,7 +2,7 @@
 
 ## Running
 ## Option 1: The Script
-just use `curl -fsSL -o ivcs.sh https://github.com/ION606/VCS/raw/main/setup.sh && chmod +x ivcs.sh && sudo ./ivcs.sh`
+just use `curl -fsSL -o ivcs.sh https://github.com/ION606/VCS/raw/main/init.sh && chmod +x ivcs.sh && sudo ./ivcs.sh`
 
 
 ## Option 2: Maually
