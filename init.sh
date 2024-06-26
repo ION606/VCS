@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # make sure the libraries are installed
-sudo dnf -y install sshpass ssh pv || sudo apt-get -y install sshpass ssh pv
+sudo dnf -y install sshpass pv || {sudo apt-get -y install sshpass pv || { echo "failed to install packages!" && exit 1; }}
 
 
 git clone https://github.com/ION606/VCS.git .ionvcs
