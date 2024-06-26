@@ -15,11 +15,24 @@ fi
 
 git clone https://github.com/ION606/VCS.git .ionvcs
 
+
 # Move files
 sudo mv .ionvcs/ionsrc.desktop /usr/share/applications/ionsrc.desktop || echo -e "\e[31mFAILED TO MOVE DESKTOP FILE\e[0m"
 mkdir -p ~/ionsrc
 mv .ionvcs/* ~/ionsrc/
-echo "alias ionvcs='bash ~/ionsrc/run.sh'" >> ~/.bashrc
+
+
+# alias stuff
+alias_line="alias ionvcs='bash ~/ionsrc/run.sh'"
+
+if grep -q "^alias ionvcs=" ~/.bashrc; then
+    sed -i "s|^alias ionvcs=.*|$alias_line|" ~/.bashrc
+else
+    echo "$alias_line" >> ~/.bashrc
+fi
+
+source ~/.bashrc
+
 
 # Clean up
 rm -rf .ionvcs
