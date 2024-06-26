@@ -19,6 +19,10 @@ case $COMMAND in
     "user")
         bash getuser.sh
     ;;
+    
+    "status")
+        bash status.sh
+    ;;
 
     "help")
         bash help.sh
