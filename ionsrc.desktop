@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=ION VCS
+Comment=A custom utility to fetch and send code to my server
+Exec=~/ionsrc/run.sh
+Icon=~/ionsrc/icon.png
+Terminal=true
+Type=Application
+Categories=Utility;
