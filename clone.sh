@@ -6,7 +6,7 @@ mkdir -p .ionvcs
 
 # Check if a path is provided as an argument
 if [ -z "$1" ]; then
-    echo "please provide a path to clone (like ~/Desktop/code_here)"
+    echo -e "\e[31mERROR!\e[0m please provide a path to clone (like \e[34m~/Desktop/code_here\e[0m)"
     exit 1
 fi
 
@@ -20,11 +20,12 @@ fi
 # Create the destination folder if it doesn't exist
 mkdir -p "$DEST_FOLDER"
 
+
 # Source the credentials file if it exists
 if [ -f "$HOME/ionsrc/creds.txt" ]; then
     source "$HOME/ionsrc/creds.txt"
 else
-    echo "credentials file not found! (please use the login command)"
+    echo -e "\e[31mcredentials file not found!\e[0m (please use the \e[0;32mlogin\e[0m command)"
     exit 1
 fi
 

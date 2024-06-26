@@ -15,5 +15,5 @@ echo "password=$password" >> "$CREDSFILE";
 # Secure the file
 chmod 600 "$CREDSFILE";
 
-echo "Logged in!";
+echo "Logged in as \033[0;31m$username\e[0m!";
 exit;

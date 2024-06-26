@@ -4,10 +4,10 @@
 cd "$PWD"
 
 if [ ! -f "$HOME/ionsrc/creds.txt" ]; then
-    echo "credentials file not found!"
+    echo -e "\e[31mcredentials file not found!\e[0m"
     exit 1
 elif [ ! -f "$PWD/.ionvcs/src.config"]; then
-    echo "config file not found!"
+    echo -e "\e[31mconfig file not found!\e[0m"
     exit 1
 fi
 

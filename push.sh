@@ -4,10 +4,10 @@
 cd "$PWD"
 
 if [ ! -f "$HOME/ionsrc/creds.txt" ]; then
-    echo "credentials file not found!"
+    echo -e "\e[31mcredentials file not found!\e[0m"
     exit 1
 elif [ ! -f "$PWD/.ionvcs/src.config"]; then
-    echo "config file not found!"
+    echo -e "\e[31mconfig file not found!\e[0m"
     exit 1
 fi
 
@@ -38,7 +38,7 @@ DIFF_OUTPUT=$(/usr/bin/sshpass -p "$password" rsync -avcn --delete -e ssh "$REMO
 
 # Check if there are differences
 if [ ! -z "$DIFF_OUTPUT" && ! $force_flag ]; then
-    echo "conflicts found between the local and remote directories (make sure they're correct and re-run using the -f flag):"
+    echo -e "\e[31mERROR\e[0m conflicts found between the local and remote directories (make sure they're correct and re-run using the \e[31m-f\e[0m flag):"
     echo "$DIFF_OUTPUT"
     exit 1;
 fi

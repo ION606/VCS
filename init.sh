@@ -7,7 +7,7 @@ if ! command -v sshpass &> /dev/null || ! command -v pv &> /dev/null || ! comman
     elif command -v apt-get &> /dev/null; then
         sudo apt-get -y install sshpass pv git
     else
-        echo "Package manager not found. Please install sshpass, pv, and git manually"
+        echo -e "\e[31mPackage manager not found. Please install sshpass, pv, and git manually\e[0m"
         exit 1
     fi
 fi
@@ -16,9 +16,10 @@ fi
 git clone https://github.com/ION606/VCS.git .ionvcs
 
 # Move files
-sudo mv .ionvcs/ionsrc.desktop /usr/share/applications/ionsrc.desktop || echo "FAILED TO MOVE DESKTOP FILE"
+sudo mv .ionvcs/ionsrc.desktop /usr/share/applications/ionsrc.desktop || echo -e "\e[31mFAILED TO MOVE DESKTOP FILE\e[0m"
 mkdir -p ~/ionsrc
 mv .ionvcs/* ~/ionsrc/
+echo "alias ionvcs='bash ~/ionsrc/run.sh'" >> ~/.bashrc
 
 # Clean up
 rm -rf .ionvcs
