@@ -45,5 +45,5 @@ fi
 
 # Use rsync with sshpass to copy files with a progress bar
 echo -n "cloning..."
-/usr/bin/sshpass -p "$password" rsync -avcn --exclude-from="$PWD/.ionign" --info=progress2 --no-i-r -h -e ssh "$DEST_FOLDER" "$REMOTE_PATH" || { echo "failed to clone!"; exit 1; }
+/usr/bin/sshpass -p "$password" rsync -avcn --include-from="$PWD/.ionvcs/add.config" --info=progress2 --no-i-r -h -e ssh "$DEST_FOLDER" "$REMOTE_PATH" || { echo "failed to clone!"; exit 1; }
 echo "done!"

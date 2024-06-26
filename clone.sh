@@ -43,4 +43,5 @@ chmod 600 "$CONF_FILE"
 # Use rsync with sshpass to copy files with a progress bar
 echo -n "cloning..."
 /usr/bin/sshpass -p "$password" rsync -a --info=progress2 --no-i-r -h -e ssh "$REMOTE_PATH" "$DEST_FOLDER" || { echo "failed to clone!"; exit 1; }
+echo "$(find . -type f ! -wholename '.ionvcs/*')" > .ionvcs/ogfiles.config
 echo "done!"

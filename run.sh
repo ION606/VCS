@@ -28,6 +28,14 @@ case $COMMAND in
         bash $HOME/ionsrc/help.sh
     ;;
     
+    "unstage")
+        bash $HOME/ionsrc/change.sh unstage "$@"
+    ;;
+
+    "add")
+        bash $HOME/ionsrc/change.sh add "$@"
+    ;;
+    
     *)
         echo "UNKNOWN COMMAND \"$COMMAND\""
         GREEN='\033[0;31m'
