@@ -36,3 +36,4 @@ source ~/.bashrc
 
 # Clean up
 rm -rf .ionvcs
+rm ivcs.sh

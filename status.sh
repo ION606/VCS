@@ -28,6 +28,7 @@ DIFF_OUTPUT=$(/usr/bin/sshpass -p "$password" rsync -avcn --delete -e ssh "$REMO
 
 # Check if there are differences
 if [ ! -z "$DIFF_OUTPUT" ]; then
+    echo -e "\e[1;32mdifferences found\e[0m"
     echo "$DIFF_OUTPUT"
     exit 1;
 else
