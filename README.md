@@ -1,4 +1,5 @@
-# My remote sourcing system
+# ION VCS
+A future version control system and file sharing system built over rsync and inspired by the github cli
 
 ## Running
 ## Option 1: The Script
