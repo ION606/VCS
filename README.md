@@ -15,10 +15,10 @@ just use `curl -fsSL -o ivcs.sh https://github.com/ION606/VCS/raw/main/init.sh &
 ## Commands
 format: `ionvcs <command> [args]`
 
-| Command  | Args        | Description                     |
-|----------|-------------|---------------------------------|
-| clone    | \<repo-url>  | Clone a repository.            |
-| user     | \<username>  | Get user information.          |
-| init     | N/A         | Initialize a repository.        |
-| login    | N/A         | Login to the system.            |
-| push     | [-f]        | Push changes to the repository. |
+| Command  | Args         | Description                     |
+|----------|--------------|---------------------------------|
+| clone    | \<repo-url>  | Clone a repository.             |
+| user     | \<username>  | Get user information.           |
+| init     | N/A          | Initialize a repository.        |
+| login    | N/A          | Login to the system.            |
+| push     | [-f]         | Push changes to the repository. |
